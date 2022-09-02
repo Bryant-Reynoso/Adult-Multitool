@@ -7,12 +7,32 @@
 	<link rel="icon" type="image/x-icon" href="./images/favicon/favicon.ico">
 </head>
 <body>
-	<div class="row">
-		<div id="app-title" class="col text-center p-3">TIP CALCULATOR</div>
-	</div>
+	<section class="row pb-3">
+		<div class="app-title col text-center py-3">TIP CALCULATOR</div>
+	</section>	
+	
+	<section class="text-center pb-3">
+		<label id="lblTip"></label>
+	</section>
+	
+	<section>
+		<input type="text" id="txtBillAmount" class="form-control" placeholder="Bill Amount">
+		
+		<div class="text-center">
+			<button id="btnPercent15" class="black-button m-5 btn" data-tip-percent="15">15%</button>
+			<button id="btnPercent18" class="black-button m-5 btn" data-tip-percent="18">18%</button>
+			<button id="btnPercent20" class="black-button m-5 btn" data-tip-percent="20">20%</button>
+			<button id="btnPercentCustom" class="black-button m-5 btn" >custom</button>
+		</div>
+	</section>
+	
+	
+	
+	<!--eventually move into sidenav-->
 	<div class="text-center">
-		<a href="index.html" class="back-button m-5  btn">Home</a>
+		<a href="index.html" class="black-button m-5 btn">Home</a>
 	</div>
-	<!--script src="scripts/main.js"></script-->
+	
+	<script src="scripts/tipcalculator/main.js"></script>
 </body>
 </html>
