@@ -1,8 +1,8 @@
 :root {
-  --title-size: 4rem;
+  --big-size: 4rem;
   --normal-size: 3rem;
-	--blue: #5BA8FA;
-	--pink: #FF94F2;
+  --blue: #5BA8FA;
+  --pink: #FF94F2;
 }
 
 *{
@@ -20,12 +20,12 @@ body *{
 }
 
 input{
-	font-size: var(--normal-size) !important;
+	font-size: var(--big-size) !important;
 	text-align: center;
 }
 
 label{
-	font-size: var(--title-size) !important;
+	font-size: var(--big-size) !important;
 	font-weight: bold !important;
 }
 
@@ -33,7 +33,7 @@ label{
 	background-color: black;
 	color: white;
 	font-weight: bold;
-	font-size: var(--title-size);
+	font-size: var(--big-size);
 }
 
 .app-selector{
