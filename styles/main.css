@@ -19,9 +19,14 @@ body *{
 	max-width: 100.9vw !important;
 }
 
-input, label{
+input{
 	font-size: var(--normal-size) !important;
 	text-align: center;
+}
+
+label{
+	font-size: var(--title-size) !important;
+	font-weight: bold !important;
 }
 
 .app-title{
