@@ -18,21 +18,26 @@
 	tipButtons.forEach((button)=>{
 		button.addEventListener("click", (event)=>{
 			var billAmountElement = document.querySelector("#txtBillAmount");
-			var billAmount = parseFloat(billAmountElement.innerHTML);
-			var tipPercent = event.target.getAttribute("data-tip-percent");
+			var billAmount = parseFloat(billAmountElement.value);
+			var tipPercent = parseInt(event.target.getAttribute("data-tip-percent"));
+			
+			console.log(billAmountElement);
+			console.log(billAmount);
+			console.log(tipPercent);
 			
 			var tipAmount = calculateTip(billAmount, tipPercent);
+			console.log(tipAmount);
 			
 			displayTip(tipAmount);
 		});
 	});
 	
-	function calculateTip(billAmount, tipPercent){
-		return (billAmount * (tipPercent * 0.1)).toFixed(2);
+	function calculateTip(billAmount, tipPercent){		
+		return (billAmount * (tipPercent * 0.01)).toFixed(2);
 	}
 	
 	function displayTip(tipAmount){
-		document.querySelector("lblTip").innerHTML = `$${tipAmount}`;
+		document.querySelector("#lblTip").innerHTML = `Tip Amount: $${tipAmount}`;
 	}
 	
 })();
