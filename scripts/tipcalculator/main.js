@@ -24,8 +24,10 @@
 				var tipPercent = parseInt(event.target.getAttribute("data-tip-percent"));
 				
 				var tipAmount = calculateTip(billAmount, tipPercent);
+				var total = calculateTotal(billAmount, parseFloat(tipAmount));
 				
 				displayTip(tipAmount);
+				displayTotalBill(total);
 			}			
 		});
 	});
@@ -34,8 +36,16 @@
 		return (billAmount * (tipPercent * 0.01)).toFixed(2);
 	}
 	
+	function calculateTotal(billAmount, tipAmount){		
+		return (billAmount + tipAmount).toFixed(2);
+	}
+	
 	function displayTip(tipAmount){
 		document.querySelector("#lblTip").innerHTML = `Tip Amount: $${tipAmount}`;
+	}
+	
+	function displayTotalBill(total){
+		document.querySelector("#lblFullBill").innerHTML = `Bill + Tip: $${total}`;
 	}
 	
 })();

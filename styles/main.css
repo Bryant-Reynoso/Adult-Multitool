@@ -2,7 +2,11 @@
   --big-size: 4rem;
   --normal-size: 3rem;
   --blue: #5BA8FA;
+  --border-blue:#4B6F95;
+  --bg-blue: #1B80CE;
   --pink: #FF94F2;
+  --border-pink: #BA6CB1;
+  --bg-pink: #DB7FD1;
 }
 
 *{
@@ -27,6 +31,7 @@ input{
 label{
 	font-size: var(--big-size) !important;
 	font-weight: bold !important;
+	display:block;
 }
 
 .app-title{
@@ -37,13 +42,13 @@ label{
 }
 
 .app-selector{
-	border-bottom: 3px solid #4B6F95;
+	border-bottom: 3px solid var(--border-pink);
 	font-size: var(--normal-size);
 	padding: 5% 0;
 }
 
 .app-selector:hover{
-	background-color: #1B80CE;
+	background-color: var(--bg-pink);
 	cursor: pointer;
 }
 
