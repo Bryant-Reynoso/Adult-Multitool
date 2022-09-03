@@ -3,6 +3,7 @@
 	//var decimalPattern = /([0-9]+)([\.]?)([0-9]{0,2})/g;
 	var allInputs = document.querySelectorAll("input");	
 	var tipButtons = document.querySelectorAll("[data-tip-percent]");
+	var clearButton = document.querySelector("#btnClear");
 		
 	allInputs.forEach((input)=>{
 		input.addEventListener("input", (event)=>{
@@ -30,6 +31,12 @@
 				displayTotalBill(total);
 			}			
 		});
+	});
+	
+	clearButton.addEventListener("click", ()=>{
+		document.querySelector("#lblTip").innerHTML = "";
+		document.querySelector("#lblFullBill").innerHTML = "";
+		document.querySelector("#txtBillAmount").value = "";
 	});
 	
 	function calculateTip(billAmount, tipPercent){		
